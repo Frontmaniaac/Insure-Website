@@ -1,0 +1,544 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*  */
+
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+h1,
+h5 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 10rem;
+    min-height: 40px;
+}
+
+.logo {
+    max-height: 20px;
+}
+
+.menu {
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.4rem;
+    border: 3px solid black;
+    display: none;
+    right: 2rem;
+
+
+}
+
+.sma {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: 0.14s linear;
+}
+
+
+.onTop {
+    transform: translateY(9px) rotate(45deg);
+
+}
+
+.onMid {
+    opacity: 0;
+}
+
+.onBot {
+    transform: translateY(-10px) rotate(-45deg);
+
+}
+
+header nav {
+    margin-right: 10rem;
+    display: flex;
+    align-items: center;
+
+}
+
+header nav a {
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #000;
+    background: #fff;
+    font-size: 1em;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    border: 2px solid rgb(95, 196, 209);
+    color: rgb(95, 196, 209);
+}
+
+button nav button {
+    margin-left: 1rem;
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+}
+
+.rightTopPat {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.leftMidPat {
+    position: absolute;
+    top: 50%;
+}
+
+.darkSide {
+    padding: 8rem 10rem;
+    display: flex;
+    background: hsl(256, 26%, 20%);
+    max-height: 450px;
+}
+
+.textWrap {
+    width: 50%;
+    margin-top: 4rem;
+    color: #fff;
+}
+
+.darkSide::before {
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.textWrap h1 {
+    font-size: 4em;
+    line-height: 1;
+}
+
+.textWrap p {
+    font-size: 1.2em;
+    margin: 2rem 4rem 2rem 0;
+}
+
+.textWrap button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+}
+
+.textWrap button:hover {
+    border: 2px solid rgb(95, 196, 209);
+    color: rgb(95, 196, 209);
+}
+
+.peopleImg {
+    min-height: 650px;
+}
+
+.about {
+    margin: 0 10rem;
+}
+
+.allAboutWrap::before {
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+}
+
+.allAboutWrap {
+    padding: 0.1rem;
+}
+
+.about h1 {
+    font-size: 4em;
+    margin: 2rem 0;
+}
+
+.aboutWrap {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+
+.aboutElWrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    max-width: 350px;
+}
+
+.aboutElWrap:nth-of-type(2) {
+    margin: 0 2rem;
+}
+
+.aboutElWrap img {
+    max-width: 70px;
+    max-height: 70px;
+    margin-bottom: 2rem;
+}
+
+.aboutElWrap h5 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.aboutElWrap p {
+    opacity: 0.7;
+}
+
+.baner {
+    margin: 5rem 10rem;
+    background: hsl(256, 26%, 20%);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.baner h1 {
+    font-size: 3em;
+    color: #fff;
+    line-height: 1;
+
+}
+
+.baner button {
+    max-height: 40px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+.baner button:hover {
+    border: 2px solid rgb(95, 196, 209);
+    color: rgb(95, 196, 209);
+}
+
+.workImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+footer {
+    padding: 3rem 10rem;
+    position: relative;
+    background-color: hsl(0, 4%, 95%);
+    overflow-x: hidden;
+}
+
+.footerImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logoWrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(211, 209, 209);
+    position: relative;
+}
+
+.socialsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialsWrap a {
+    font-size: 24px;
+    margin-right: 1rem;
+    color: hsl(240, 0%, 51%);
+}
+
+.socialsWrap a:hover {
+    color: rgb(104, 103, 103);
+}
+
+.logoWrap:last-of-type {
+    margin-right: 0;
+}
+
+.listsWrap {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.listsWrap ul:last-of-type {
+    margin-right: 12rem;
+}
+
+.listsWrap li {
+    list-style-type: none;
+}
+
+.listsWrap a {
+    text-decoration: none;
+    color: #000;
+}
+
+.listsWrap ul li:first-of-type a {
+
+    color: hsl(240, 0%, 51%);
+}
+
+.listsWrap li:first-of-type {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.listsWrap li {
+    line-height: 2;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.listsWrap li a:hover {
+    color: hsl(240, 0%, 51%);
+}
+
+.activeHeader {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 1rem 0 0 0;
+}
+
+.activeNav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 2rem 0 0 0;
+}
+
+.liMargin {
+    margin-top: 1rem;
+}
+
+@media (max-width:1350px) {
+    .peopleImg {
+        min-height: 500px;
+        max-width: 400px;
+        margin: 4rem 0 0 0;
+    }
+
+}
+
+@media (max-width:1120px) {
+    header {
+        padding: 1rem 0 1rem 4rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+
+    }
+
+    .darkSide {
+        flex-direction: column;
+        align-items: center;
+        min-height: 1050px;
+        text-align: center;
+        padding: 0 8rem;
+    }
+
+    .peopleImg {
+        order: 1;
+        margin-left: 0;
+    }
+
+    .textWrap {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        align-items: center;
+        width: 100%;
+    }
+
+    .textWrap p {
+        margin: 2rem;
+    }
+
+
+    .allAboutWrap {
+        margin-top: 8rem;
+    }
+
+    .about {
+        margin: 2rem;
+    }
+
+    .allAboutWrap::before {
+        height: 1px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .allAboutWrap {
+        text-align: center;
+    }
+
+    .aboutElWrap {
+        align-items: center;
+        max-width: 500px;
+    }
+
+    .baner {
+        margin: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .baner h1 {
+        margin-bottom: 2rem;
+    }
+
+    .listsWrap ul:last-of-type {
+        margin-right: 5rem;
+    }
+
+    footer {
+        padding: 3rem 3rem;
+    }
+
+}
+
+@media (max-width:680px) {
+    .darkSide {
+        padding: 0 2rem;
+    }
+
+    .aboutWrap {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutElWrap {
+        margin: 3rem 0;
+    }
+
+    .listsWrap ul:last-of-type {
+        margin-right: 0;
+    }
+
+    .textWrap h1,
+    .about h1 {
+        font-size: 3.5em;
+    }
+
+    .baner {
+        padding: 2rem 2rem;
+    }
+
+    .rightTopPat {
+        position: absolute;
+        right: -10%;
+        top: 90%;
+        width: 200px;
+    }
+
+    .leftMidPat {
+        position: absolute;
+        top: 20%;
+        z-index: 0;
+    }
+
+    .peopleImg {
+        z-index: 3;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .logoWrap {
+        flex-direction: column;
+    }
+
+    .socialsWrap {
+        margin-top: 2rem;
+    }
+
+    .footerWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .listsWrap {
+        flex-direction: column;
+    }
+
+    .listsWrap ul {
+        margin-top: 1rem;
+    }
+
+    .listsWrap ul:last-of-type {
+        margin-right: 0;
+    }
+
+    .textWrap h1,
+    .about h1,
+    .baner h1 {
+        font-size: 2.5em;
+    }
+
+    .darkSide {
+        min-height: 1100px;
+        padding: 0 1rem;
+    }
+
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
