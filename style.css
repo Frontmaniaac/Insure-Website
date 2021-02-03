@@ -1,8 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    /*  */
-
     font-family: 'Karla', sans-serif;
 }
 
@@ -237,6 +235,7 @@ main {
     color: #fff;
     border: 2px solid #fff;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 .baner button:hover {
@@ -444,6 +443,10 @@ footer {
 }
 
 @media (max-width:680px) {
+    main {
+        overflow-x: hidden;
+    }
+
     .darkSide {
         padding: 0 2rem;
     }
